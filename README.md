@@ -32,5 +32,5 @@ Asegúrate de tener instalado Node.js y npm (Node Package Manager) en tu sistema
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/sistema-regional.git
+   git clone https://github.com/daniel-dieguez/Web-Registro-Nacional.git
 
