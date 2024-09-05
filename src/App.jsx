@@ -14,19 +14,28 @@ import Despidos from './pages/Despidos';
 export default function App() {
   return (
     <Router>
-      <div>
-      <Navigation></Navigation>
-      </div>
       <Routes>
-      <Route excat path='/inicio' element={<Inicio/>}></Route>
-      <Route excat path='/regiones' element={<Regiones/>}></Route>
-      <Route excat path='/supervisores' element={<Supervisores/>}></Route>
-      <Route excat path='/vendedores' element={<Vendedores/>}></Route>
-      <Route excat path='/ventas' element={<Ventas/>}></Route>
-      <Route excat path='/contratos' element={<Contratos/>}></Route>
-      <Route excat path='/despidos' element={<Despidos/>}></Route>
+        <Route exact path='/inicio' element={<Inicio />} />
+
+        <Route 
+          path="/*" 
+          element={
+            <div style={{ display: 'flex' }}>
+              <Navigation />
+              <div style={{ marginLeft: '250px', width: '100%' }}>
+                <Routes>
+                  <Route exact path='/regiones' element={<Regiones />} />
+                  <Route exact path='/supervisores' element={<Supervisores />} />
+                  <Route exact path='/vendedores' element={<Vendedores />} />
+                  <Route exact path='/ventas' element={<Ventas />} />
+                  <Route exact path='/contratos' element={<Contratos />} />
+                  <Route exact path='/despidos' element={<Despidos />} />
+                </Routes>
+              </div>
+            </div>
+          } 
+        />
       </Routes>
     </Router>
-    
   )
 }
