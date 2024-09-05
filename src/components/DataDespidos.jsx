@@ -19,6 +19,11 @@ export default function DataDespidos() {
         })
       
     }, [])
+
+    const formatearFecha = (fechas) => {
+      const fecha = new Date(fechas);
+      return fecha.toLocaleDateString('es-ES'); // Formato dia/mes/año
+    };
     
 
 
@@ -40,7 +45,7 @@ export default function DataDespidos() {
         {despidos.map((item, index)=>
         <tr key={index}>
           <td>{item.id_renuncia}</td>
-          <td>{item.fecha}</td>
+          <td>{formatearFecha(item.fecha)}</td>
           <td>{item.vendedor.id_vendedor}</td>
           <td>{item.vendedor.nombre_vendedor}</td>
           <td>{item.motivo}</td>
