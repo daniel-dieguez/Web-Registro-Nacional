@@ -21,7 +21,7 @@ export default function DataVendedor() {
   return (
 
     <div>
-    <Table  striped border hover variant='dark' responsive='md' >
+    <Table  striped bordered hover variant='dark' responsive='md' >
     <thead>
     <tr>
       <th>Id Vendedor</th>

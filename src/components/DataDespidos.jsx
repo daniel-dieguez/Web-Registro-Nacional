@@ -24,12 +24,13 @@ export default function DataDespidos() {
       const fecha = new Date(fechas);
       return fecha.toLocaleDateString('es-ES'); // Formato dia/mes/año
     };
+
     
 
 
   return (
 <div>
-        <Table  striped border hover variant='dark' responsive='md' >
+        <Table  striped bordered hover variant='dark' responsive='md' >
         <thead>
         <tr>
           <th>Id Renuncia</th>
